@@ -14,7 +14,7 @@ def classify_flow(flow):
     flow_classification = ''
 
     prediction = benign_malicious_classifier.predict(flow)[0]
-    print(benign_malicious_classifier.predict_proba(flow))
+    # print(benign_malicious_classifier.predict_proba(flow))
 
     if prediction == 'benign':
         flow_classification = prediction
@@ -42,16 +42,27 @@ if __name__ == "__main__":  # Mandatory if you are running on Windows Platform
     if len(input_filepaths) == 1:  # Single file / Interface
         input_filepaths = input_filepaths[0]
 
+    count = 0
+
     flow_streamer = NFStreamer(
         source=input_filepaths, statistical_analysis=True, idle_timeout=1
     )
     try:
         for flow in flow_streamer:
-            flow_dict = dict(zip(flow.keys(), flow.values()))
+            # flow_dict = dict(zip(flow.keys(), flow.values()))
             # print(flow_dict)
-            flow_df = pd.DataFrame.from_dict([flow_dict])
-            classification = classify_flow(flow_df)
-            print(classification)
+            # flow_df = pd.DataFrame.from_dict([flow_dict])
+            # classification = classify_flow(flow_df)
+            # print(classification)
+            # print(type(flow_df['src_ip'][0]))
+            # print(flow_df['src_ip'])
+            # if flow_df['src_ip'][0] == '172.27.253.224':
+            #     print(flow_df['src_ip'])
+            #     count += 1
+            #     print(count)
+            flow_streamer.to_csv('test.csv')
+            
+        
 
     except KeyboardInterrupt:
         print("Terminated.")
