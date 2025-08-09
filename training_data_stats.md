@@ -21,7 +21,12 @@ Botnet: 144
 
 # persistent model
 ## Unraveled
-eeee
+Reconnaissance: 3669
+Lateral Movement: 2791
+Establish Foothold: 2771
+Data Exfiltration: 769
 
 ## Testbed
-eeee
+Reconnaissance: 599
+Data Exfiltration: 719
+Establish Foothold: 682
