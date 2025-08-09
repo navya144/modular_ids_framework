@@ -30,3 +30,55 @@ Data Exfiltration: 769
 Reconnaissance: 599
 Data Exfiltration: 719
 Establish Foothold: 682
+
+# Persistence Model
+## Unraveled
+Reconnaissance: 1479
+Lateral Movement: 1127
+Establish Foothold: 1092
+Data Exfiltration: 302
+
+## CIC IDS
+DoS Slowhttptest: 235
+FTP-Patator: 580
+DDoS: 740
+DoS GoldenEye: 663
+DoS Slowloris: 545
+DoS Hulk: 713
+SSH-Patator: 419
+Botnet: 105
+
+## Persistent Testbed
+Reconnaissance: 1266
+Data Exfiltration: 1341
+Establish Foothold: 1393
+
+## Non-Persistent Testbed
+SSH-Patator: 537
+DoS Hulk: 563
+DoS Slowloris: 562
+DoS GoldenEye: 539
+DoS Slowhttptest: 550
+Botnet: 188
+FTP-Patator: 552
+DDoS: 509
+
+# Traffic Classifier
+## Unraveled
+benign: 20000
+Establish Foothold: 2771
+Lateral Movement: 2791
+Reconnaissance: 3669
+Data Exfiltration: 769
+
+## CIC IDS
+benign: 20000
+DoS Hulk: 3533
+FTP-Patator: 2827
+DoS GoldenEye: 3539
+DoS Slowhttptest: 1199
+SSH-Patator: 2091
+DoS Slowloris: 2732
+DDoS: 3563
+Botnet: 516
+
